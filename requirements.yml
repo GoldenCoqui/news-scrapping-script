@@ -1,0 +1,4 @@
+name: news-scrapper-env
+channels:
+  - defaults
+prefix: C:\Users\wdlt2\miniconda3\envs\news-scrapper-env
