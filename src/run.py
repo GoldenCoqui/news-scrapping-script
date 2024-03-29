@@ -26,7 +26,7 @@ from ai_summary import summarize
 def main():
 
     # urls is a list of all the urls in the text file
-    with open('../Data/raw/url.txt', 'r') as file:
+    with open('../Data/raw/urls.txt', 'r') as file:
         urls = file.read().splitlines()
 
     # goes through all the urls in urls list and starts with the first one.
