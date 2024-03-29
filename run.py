@@ -1,11 +1,11 @@
 """
 Module: run
 
-This module serves as the main program to run the scraper, title_scraper, and file_handler.
+This module serves as the main program to run the scraper, title_scraper, and ai_summary.
 
 Functions:
 - main() -> None:
-    Main function to execute scraper, title_scraper, and file_handler.
+    Main function to execute scraper, title_scraper, and ai_summary.
 
 Input:
 - urls.txt - textfile filled with urls to the Ring articles
@@ -20,10 +20,11 @@ SOLID Principle: Single Responsibility Principle (SRP)
 """
 
 from scraper import scrape_news
-from file_handler import save_to_file
 from title_scraper import scrape_title
+from ai_summary import summarize
 
 def main():
+
     # urls is a list of all the urls in the text file
     with open('./Data/raw/urls.txt', 'r') as file:
         urls = file.read().splitlines()
@@ -31,17 +32,19 @@ def main():
     # goes through all the urls in urls list and starts with the first one.
     # Index is the for loop default variable.
     for index, url in enumerate(urls, start=1):
+
         print(f"Scraping Article {index}")
-        content_text = scrape_news(url, index)
-        headline = scrape_title(url, index)
 
-        if content_text is not None:
-            save_to_file(index, "Data/processed/", url, None, content_text)
+        scrape_title(url, index, "Data/raw/headlines/")
+        scrape_news(url, index, "Data/raw/articles/")
 
-        if headline is not None:
-            save_to_file(index,"Data/raw/headlines/", url, headline, None)
+        print('-' * 100)
+        
+        print(f"Summarizing Article {index}")
 
-        print('-' * 40)
+        summarize("Data/raw/articles/","Data/processed/", index, "Data/raw/headlines/")
+
+        print('=' * 100)
 
 if __name__ == "__main__":
     main()

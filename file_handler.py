@@ -23,18 +23,29 @@ SOLID Principle: Single Responsibility Principle (SRP)
 - It aims to have only one reason to change: modifications related to the file-saving logic.
 
 """
-
+import textwrap
 
 def save_to_file(index, filePath, url, headline, content_text):
-    try:
-        with open(f"{filePath}article_{index}.txt", 'w', encoding='utf-8') as file:
-            if headline is not None:
-                file.write(f"Headline: {headline}\n\n")
-                print(f"Article {index} from {url} downloaded successfully.")
-            if content_text is not None:
-                file.write(content_text)
-                print(f"Article {index} header downloaded sucessfully")
+   try:
+       with open(f"{filePath}article_{index}.txt", 'w', encoding='utf-8') as file:
+           
+           if headline is not None:
+               
+               file.write(f"Headline: {headline}\n\n\n")
+               
+               print(f"Article {index} header downloaded sucessfully")
 
-        
-    except Exception as e:
-        print(f"Error saving article {index} from {url} to file: {str(e)}")
+           if content_text is not None:
+               
+               # Wrap text with a maximum width of 80 characters
+               wrapped_content = textwrap.fill(content_text, width=80)
+
+               file.write(wrapped_content)
+
+               if url is not None:
+                  print(f"Article {index} from {url} downloaded successfully.")
+               else:
+                    print(f"Article {index} downloaded successfully.")
+
+   except Exception as e:
+       print(f"Error saving article {index} from {url} to file: {str(e)}")
