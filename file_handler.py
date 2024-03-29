@@ -31,7 +31,7 @@ def save_to_file(index, filePath, url, headline, content_text):
            
            if headline is not None:
                
-               file.write(f"Headline: {headline}\n\n\n")
+               file.write(f"Headline: {headline}\n")
                
                print(f"Article {index} header downloaded sucessfully")
 
