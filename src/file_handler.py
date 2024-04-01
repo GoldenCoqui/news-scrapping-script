@@ -30,10 +30,10 @@ def save_to_file(index, filePath, url, headline, content_text):
        with open(f"{filePath}article_{index}.txt", 'w', encoding='utf-8') as file:
            
            if headline is not None:
+                
+                file.write(f"{headline}\n")
                
-               file.write(f"Headline: {headline}\n")
-               
-               print(f"Article {index} header downloaded sucessfully")
+                print(f"Article {index} header downloaded sucessfully")
 
            if content_text is not None:
                
