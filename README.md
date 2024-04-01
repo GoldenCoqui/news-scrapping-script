@@ -79,6 +79,7 @@ The program will start scraping the articles. Individual text files will be crea
 
    - The program uses the BeautifulSoup library for web scraping.
    - The program uses Google Gemini API for summarzing the articles.
+   - The program uses Python-dotenv to find the .env file to keep API key secure from version control
    - Ensure you have an active internet connection for the program to fetch the articles.
 
 If you encounter any issues or have questions, feel free to open an issue on this repository.
