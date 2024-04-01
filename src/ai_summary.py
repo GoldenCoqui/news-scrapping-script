@@ -2,7 +2,7 @@
 Module: article_summarizer 
 
 This module is used to summarize the contents of a text file using Gemini 
-Generative AI AP.
+Generative AI API.
 
 Functions:
 - summarize(readFilePath, writeFilePath, index, headlinePath) -> None:
