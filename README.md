@@ -20,7 +20,7 @@ The **AI Article Summarizer** is a Python program designed to scrape news articl
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/GoldenCoqui/news-scrapping-script/tree/ai_summary
+git clone -b ai_summary https://github.com/GoldenCoqui/news-scrapping-script.git
 ```
 
 ### 2. Create Conda Environment
@@ -31,7 +31,7 @@ conda activate ai-summary
 ```
 
 ### 3. Get Google Gemini API Key
-Go to https://ai.google.dev/ to generate your own API key. You will need a google account. `REMEMBER TO KEEP YOUR KEY SECURE`. Put your api key in a .env and set up the .env with this format
+Go to https://ai.google.dev/ to generate your own API key. You will need a google account. `REMEMBER TO KEEP YOUR KEY SECURE`. Put your api key in a .env and set up the .env with the format below. You can leave your .env outside of the src and Data file.
 
 ```bash
 API_KEY="Your-Actual-API-Key-Goes-Here"
