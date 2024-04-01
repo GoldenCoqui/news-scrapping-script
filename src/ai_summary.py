@@ -26,15 +26,20 @@ SOLID Principle: Single Responsibility Principle (SRP)
 import os
 import google.generativeai as genai
 from file_handler import save_to_file
+from dotenv import load_dotenv
+
+# loads .env that will hold API key KEEP PRIVATE
+load_dotenv()
 
 # API key configuration
-genai.configure(api_key="API_KEY")
+genai.configure(api_key=os.getenv("API_KEY"))
 
 # Initialize the generative model
 model = genai.GenerativeModel('gemini-pro')
 
 def summarize(readFilePath, writeFilePath, index, headlinePath):
   try:
+    
     if headlinePath is not None:
       with open(f"{headlinePath}article_{index}.txt", 'r', encoding='utf-8') as headerFile:
         headline = headerFile.read()
