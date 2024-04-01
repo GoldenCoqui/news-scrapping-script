@@ -29,12 +29,13 @@ def save_to_file(index, filePath, url, headline, content_text):
    try:
        with open(f"{filePath}article_{index}.txt", 'w', encoding='utf-8') as file:
            
-           if headline is not None:
-                
+           # writes headline 
+           if headline is not None:                
                 file.write(f"{headline}\n")
                
                 print(f"Article {index} header downloaded sucessfully")
 
+            # writes article content
            if content_text is not None:
                
                # Wrap text with a maximum width of 80 characters
