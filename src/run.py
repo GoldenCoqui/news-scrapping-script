@@ -35,13 +35,13 @@ def main():
         print(f"Scraping Article {index}")
 
         scrape_title(url, index, "../Data/raw/headlines/")
-        scrape_news(url, index, "../Data/raw/articles/")
+        scrape_news(url, index, "../Data/processed/articles/")
 
         print('-' * 100)
         
         print(f"Summarizing Article {index}")
 
-        summarize("../Data/raw/articles/","../Data/processed/", index, "../Data/raw/headlines/")
+        summarize("../Data/processed/articles/","../Data/processed/summarized/", index, "../Data/raw/headlines/")
 
         print('=' * 100)
 
