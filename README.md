@@ -73,7 +73,7 @@ python run.py
 ```
 ### Output
 
-The program will start scraping the articles. Individual text files will be created in the Data/raw/articles folder, named article_1.txt, article_2.txt, etc.  The program will then start taking those article_#.txt and use Gemini API to summarize them. The summarized articles will then be put in Data/processed.  The terminal will let the user know what articles are being scrapped and summarized in real time.
+The program will start scraping the articles. Individual text files will be created in the Data/processed/articles folder, named article_1.txt, article_2.txt, etc.  The program will then start taking those article_#.txt and use Gemini API to summarize them. The summarized articles will then be put in Data/processed/summarized.  The terminal will let the user know what articles are being scrapped and summarized in real time.
 
 # Additional Information
 
