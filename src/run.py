@@ -22,6 +22,19 @@ SOLID Principle: Single Responsibility Principle (SRP)
 from scraper import scrape_news
 from title_scraper import scrape_title
 from ai_summary import summarize
+from text_to_html import txt_to_html
+import os
+
+# Specify the file path
+file_path = "../Data/processed/html/html_article.html"
+
+# Check if the file exists before attempting to delete it
+if os.path.exists(file_path):
+    os.remove(file_path)
+    print(f"File '{file_path}' has been deleted.")
+else:
+    print(f"File '{file_path}' does not exist.")
+
 
 def main():
 
@@ -43,7 +56,14 @@ def main():
 
         summarize("../Data/processed/articles/","../Data/processed/summarized/", index, "../Data/raw/headlines/")
 
+        print('-' * 100)
+
+        txt_to_html(f"../Data/processed/summarized/article_{index}.txt", f"../Data/processed/html/html_article.html")
+        print(f"Summarized article_{index}.txt successfully added to article_html.txt")
+
         print('=' * 100)
+
+
 
 if __name__ == "__main__":
     main()
