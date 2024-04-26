@@ -37,7 +37,6 @@ def txt_to_html(txt_file, html_file):
     header = content[0].strip()
     paragraph = "".join(content[1:]).strip()
 
-    # Create root element for HTML, try to remember the structure of a HTML file
     if os.path.exists(html_file):
         tree = ET.parse(html_file)
         root = tree.getroot()
