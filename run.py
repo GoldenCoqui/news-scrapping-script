@@ -45,16 +45,16 @@ def main():
     # goes through all the urls in urls list and starts with the first one.
     for index, url in enumerate(urls, start=1):
 
-        print(f"Scraping Article {index}")
+        # print(f"Scraping Article {index}")
 
-        scrape_title(url, index, "../Data/raw/headlines/")
-        scrape_news(url, index, "../Data/processed/articles/")
+        # scrape_title(url, index, "../Data/raw/headlines/")
+        # scrape_news(url, index, "../Data/processed/articles/")
 
-        print('-' * 100)
+        # print('-' * 100)
         
-        print(f"Summarizing Article {index}")
+        # print(f"Summarizing Article {index}")
 
-        summarize("../Data/processed/articles/","../Data/processed/summarized/", index, "../Data/raw/headlines/")
+        # summarize("../Data/processed/articles/","../Data/processed/summarized/", index, "../Data/raw/headlines/")
 
         print('-' * 100)
 
