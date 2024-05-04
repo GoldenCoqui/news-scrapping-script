@@ -67,9 +67,8 @@ def txt_to_html(txt_file, html_file):
         tree.write(f, encoding='utf-8', xml_declaration=True)  # Write the tree to the file with UTF-8 encoding and XML declaration
 
 def main():
-     # urls.txt is a list of all the urls in the text file
-    with open('../Data/raw/urls.txt', 'r') as file:
-        urls = file.read().splitlines()
+
+    text_files = [file for file in os.listdir("summarized/") if file.endswith(".txt")]
 
     html_file_path = "html_text_file/html_article.html"
 
@@ -80,10 +79,8 @@ def main():
     else:
         print(f"File '{html_file_path}' does not exist.")
 
-    index = 0
-
     # goes through all the urls in urls list and starts with the first one.
-    for index, url in enumerate(urls, start=1):
+    for index, txt_file in enumerate(text_files, start=1):
 
 
         print('=' * 100)
