@@ -32,18 +32,12 @@ def html_tags_content(root, header, paragraph):
     p = ET.SubElement(body, "p")  # Create 'p' element under 'body'
     p.text = paragraph  # Set text content of 'p' element
 
-"""
-Converts a text file with header and paragraph to an HTML file.
-Make necessary changes for multiple news articles. This script is
-only for one news article.
 
-Args:
-    txt_file (str): Path to the text file.
-    html_file (str): Path to the output HTML file.
-"""
 def txt_to_html(txt_file, html_file):
     """
-    Convert a text file to an HTML file.
+    Converts a text file with header and paragraph to an HTML file.
+    Make necessary changes for multiple news articles. This script is
+    only for one news article.
 
     Args:
         txt_file (str): Path to the text file.
