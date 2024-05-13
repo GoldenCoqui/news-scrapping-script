@@ -1,4 +1,6 @@
-# News Scraper
+# [Check my site for information about this Repo](https://goldencoqui.github.io/)
+
+## News Scraper
 
 The **News Scraper** is a Python program designed to scrape news articles from provided URLs, extracting relevant content, and saving it to individual text files. This README.md file provides comprehensive instructions on how to set up the environment, run the program, and understand the output.
 
