@@ -1,4 +1,4 @@
-# AI Article Summarizer
+# AI Article Summarizer (With .html doc output)
 
 The **AI Article Summarizer** is a Python program designed to scrape news articles from provided URLs, extracting relevant content, and saving it to individual text files.  Next, it takes those text files and puts them into Google Gemini API to summarize them, for a more bite size read. This README.md file provides comprehensive instructions on how to set up the environment, run the program, and understand the output.
 
@@ -73,7 +73,7 @@ python run.py
 ```
 ### Output
 
-The program will start scraping the articles. Individual text files will be created in the Data/processed/articles folder, named article_1.txt, article_2.txt, etc.  The program will then start taking those article_#.txt and use Gemini API to summarize them. The summarized articles will then be put in Data/processed/summarized.  The terminal will let the user know what articles are being scrapped and summarized in real time.
+The program will start scraping the articles. Individual text files will be created in the Data/processed/articles folder, named article_1.txt, article_2.txt, etc.  The program will then start taking those article_#.txt and use Gemini API to summarize them. The summarized articles will then be put in Data/processed/summarized. As well a html document will be outputed that will contain the headline and summarized data.  The terminal will let the user know what articles are being scrapped and summarized in real time.
 
 # Additional Information
 
